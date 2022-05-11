@@ -1,0 +1,384 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*  */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+@font-face {
+	font-family: "Diaspora";
+	src: url(DiasporaRegular-ALdw7.otf)
+}
+
+:root {
+	--main-color: #E5F1FF;
+	--sec-color: #0B1D51;
+	background-color: var(--main-color);
+	color: var(--sec-color);
+	font-family: Roboto;
+}
+
+.itemdiv {
+	border: solid 1px black;
+	height: 5vw;
+	margin: 10px 25px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	width: 70%;
+	border-radius: 15px;
+}
+
+.divs {
+	border: black solid 1px;
+}
+
+.container {
+	width: 100vw;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	grid-template-rows: 1fr 6fr;
+}
+
+.top {
+	font-family: "Diaspora";
+	font-weight: 700;
+	font-size: 40px;
+	letter-spacing: 2px;
+
+	grid-row-start: 1;
+	grid-row-end: 1;
+	grid-column-start: 1;
+	grid-column-end: 4;
+
+	background-color: #99A5B3;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.title{
+}
+
+.topbutton{
+	border: solid 1px var(--sec-color);
+	color: var(--sec-color);
+}
+
+.topbutton:hover{
+	background-color: var(--sec-color);
+}
+
+
+.main {
+	grid-row-start: 2;
+	grid-row-end: 2;
+	grid-column-start: 2;
+	grid-column-end: 3;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* justify-content: space-evenly; */
+}
+
+.mainmain, .mainprimary {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	width: 100%;
+	margin: 15px;
+}
+
+.sidebar {
+	background-color: #99A5B3;
+	height: 100%;
+
+	grid-row-start: 2;
+	grid-row-end: 2;
+	grid-column-start: 1;
+	grid-column-end: 1;
+
+	font-size: 20px;
+}
+
+.sidebaritems{
+	height: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.sidebarmain {
+	display: flex;
+	flex-direction: column;
+}
+
+.projectslisttitle{
+	font-family: "Diaspora";
+	font-weight: 700;
+	font-size: 36px;
+	letter-spacing: 2px;
+
+	text-align: center;
+	padding: 20px 0 50px 0;
+}
+
+.projects {
+	margin: 25px 0;
+	text-align: center;
+}
+
+.projects:hover {
+	font-weight: 500;
+}
+
+.classOn{
+	font-weight: 500;
+	/* border-bottom: #586A9E solid 2px; */
+	text-decoration: underline;
+	text-decoration-color: #586A9E;
+}
+
+.newproject{
+	margin-top: 100px;
+	/* margin-left: 175px; */
+}
+
+.enternewitem {
+	width: 500px;
+	border: solid black 1px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin: 25px;
+	border-radius: 15px;
+}
+
+.divison {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.divbuttons{
+	margin: 0 10px
+}
+
+.box {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	margin: 5px;
+}
+
+.enternewitem input, .enternewitem select, .editnewitem input, .editnewitem select{
+	margin: 1px;
+	text-align: center;
+}
+
+.enternewitem label {
+	text-align: center;
+	margin: 1px;
+}
+
+
+
+
+
+.hidden {
+	display: none;
+}
+
+.modalstuff {}
+
+.modalbutton {}
+
+.modalbackground {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	width: 100vw;
+	height: 100vh;
+	left: 0;
+	top: 0;
+	overflow: auto;
+	/* Fallback color */
+	background-color: rgb(0, 0, 0);
+	/* Black w/ opacity */
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modalcontent {
+	border: solid black 1px;
+	margin: 20% auto 0 auto;
+	height: 25%;
+	width: 50%;
+	background-color: #E5F1FF;
+	border-radius: 15px;
+	text-align: center;
+	padding: 45px;
+}
+
+.modaltext{
+	font-size: 18px;
+}
+
+
+.close {
+	float: right;
+}
+
+
+.editnewitem {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	font-size: 18px;
+	gap: 10px;
+}
+
+.maintitle {
+	font-size: 20px;
+	font-weight: 500;
+	margin: 10px;
+}
+
+
+.itemdivbtn {
+	display: inline-block;
+	outline: 0;
+	border: solid black 1px;
+	background-color: transparent;
+	border-radius: 5px;
+	padding: 7px 12px 8px;
+	font-size: 14px;
+	font-weight: 400;
+	transition: transform 200ms, background 200ms;
+}
+
+button:hover {
+	background-color: grey;
+	color: white;
+}
+
+.itemdivdeletebtn:hover {
+	background-color: red;
+	color: white;
+}
+
+
+.itemdivdeletebtn {
+	border: solid 1px red;
+}
+
+.itemtitletxt {
+	width: 200px;
+	text-align: center;
+}
+
+.checkboxbtn {
+	width: 50px;
+}
+
+button {
+	display: inline-block;
+	outline: 0;
+	border: solid black 1px;
+	background-color: transparent;
+	border-radius: 5px;
+	padding: 7px 12px 8px;
+	font-size: 14px;
+	font-weight: 400;
+	transition: transform 200ms, background 200ms;
+}
+
+input, select {
+	border-radius: 10px;
+	border: solid black 1px;
+	padding: 10px 5px;
+	width: 200px;
+}
+
+
+.priorityp, .duedatep{
+	background-color: white;
+	border-radius: 15px;
+	width: 90px;
+	padding: 10px 0;
+	text-align: center;
+	border: solid 1px #0B1D51;
+}
+
+input[type="checkbox"] {
+	appearance: none;
+	background-color: #fff;
+	margin: 0;
+	width: 30px;
+	height: 30px;
+	border: 0.15em solid currentColor;
+	transform: translateY(-0.075em);
+	display: grid;
+	place-content: center;
+	font-size: 17px;
+}
+
+input:checked {
+	background-color:lightgreen;
+
+}

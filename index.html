@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>My To-Do List</title>
+    <link rel="icon" href="check.png">
+</head>
+
+<body>
+    <div id="container" class="container">
+
+        <div class="top divs">
+            <div class="title">
+                my to-do list
+            </div>
+        </div>
+
+        <div class="sidebar divs" id="sidebar">
+            <div class="sidebaritems">
+                <div class="projectslisttitle">
+                    Projects
+                </div>
+
+                <div class="sidebarmain" id="sidebarmain">
+                    <!-- dynamically created -->
+
+                </div>
+
+                <button class="newproject" id="newproject">
+                    Add New Project
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="main divs">
+            <div class="modalstuff" id="modalstuff">
+
+                <div class="modalbackground" id="modalbackground">
+                    <div class="modalcontent" id="modalcontent">
+                        <span class="close" id="close">&times;</span>
+                        <p class="modaltext" id="modaltext">Edit Task</p>
+
+                        <div class="editnewitem" id="editnewitem">
+                            <div class="box">
+                                <label for="">Title</label>
+                                <input id="editnameinput" type="text" value="">
+                            </div>
+                            <div class="box">
+                                <label for="">Project</label>
+                                <select name="" id="projectboxone">
+
+                                </select>
+                                <!-- <label for="">Project</label> -->
+                                <!-- <input id="editprojectinput" type="text" value="Main"> -->
+                            </div>
+                            <div class="box">
+                                <label for="">Due</label>
+                                <input id="editduedateinput" type="text" value="Tomorrow">
+                            </div>
+                            <div class="box">
+                                <label for="">Priority</label>
+                                <select name="" id="editpriorityinput">
+                                    <option value="High">High</option>
+                                    <option value="Medium">Medium</option>
+                                    <option value="Low">Low</option>
+                                </select>
+                            </div>
+                            <div class="box">
+                                <button class="edititembutton" id="edititembutton">Confirm Edits</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="mainmain" id="mainmain">
+                <div class="divison">
+                    <div class="divisionbuttons">
+                        <button class="addnew divbuttons" id="addnew">
+                            Add New Item
+                        </button>
+                        <button class="divbuttons" id="settingsbutton">
+                            Show All Details
+                        </button>
+                        <button class="topbutton divbuttons" id="resetbutton">
+                            Reset
+                        </button>
+                     
+                    </div>
+
+                    <div class="enternewitem" id="enternewitem">
+                        <div class="box">
+                            <label for="">Title</label>
+                            <input id="newitemname" type="text" value="">
+                        </div>
+                        <div class="box">
+                            <label for="">Project</label>
+                            <select name="" id="projectbox">
+
+                            </select>
+                            <!-- <input id="newitemproject" type="text" value="Main"> -->
+                        </div>
+                        <div class="box">
+                            <label for="">Due</label>
+                            <input id="newitemduedate" type="text" value="Tomorrow">
+                        </div>
+                        <div class="box">
+                            <label for="">Priority</label>
+                            <!-- <input id="newitempriority" type="text" value="high"> -->
+                            <select name="" id="newitempriority">
+                                <option value="High">High</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Low">Low</option>
+                            </select>
+                        </div>
+                        <div class="box">
+                            <button class="newitembutton">Confirm Create</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="maintop">
+                <div class="maintitle" id="maintitle">All Projects</div>
+            </div>
+            <div class="mainprimary" id="mainprimary">
+                <!-- dynamic -->
+            </div>
+
+            <div class="mainbottom">
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
